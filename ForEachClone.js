@@ -7,7 +7,7 @@ console.log(testArr);
 
 // Make the "myEach" function
 // For each element in the passed array, do ___
-function myEach(arr){
+function myEach(callback, arr){
     for(let i = 0; i < arr.length; i++){
         arr[i] = callbackDouble(arr[i]);
     }
@@ -19,7 +19,7 @@ function callbackDouble(number) {
 }
 
 // Call myEach on our test array
-myEach(testArr);
+myEach(callback, testArr);
 // Expected result is each number to be doubled from the original input
 console.log("Expected values: Each value should be double the value in the previous version of the array")
 console.log(testArr);
