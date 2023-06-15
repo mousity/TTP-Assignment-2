@@ -1,3 +1,5 @@
+/* forEach is a function that performs a callback function once per element in an array */
+
 // Declare a test array and print out initial values
 let testArr = [1, 2, 3, 4, 5];
 console.log("Initial values");
