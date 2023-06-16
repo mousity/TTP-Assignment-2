@@ -5,12 +5,15 @@
 
 // Initialize and print original array
 let originalArr = [90, 20, 40, 30, 80, 20];
-console.log("Original array:");
+let originalStrArr = ['Gouda', 'Havarti', 'Swiss', 'Parmesan'];
+console.log("Original num array:");
 console.dir(originalArr);
+console.log("Original string array:");
+console.dir(originalStrArr);
 
 // Custom function to filter according to callback function
 function myFilter(callback, arr) {
-    let temp = Array.from(originalArr); // Creates a shallow copy of the original array
+    let temp = Array.from(arr); // Creates a shallow copy of the original array
 
     // Filter starts here
     for(let i = 0; i < temp.length; i++) {
@@ -35,10 +38,22 @@ function callbackOverThirty(num) {
     }
 }
 
+// Function to test string arrays
+function callbackWordOver6(str) {
+    if(str.length > 6) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 console.log("\nProcessing...\n");
 
 let filteredArr = myFilter(callbackOverThirty, originalArr);
+let filteredStrArr = myFilter(callbackWordOver6, originalStrArr);
 
 // Final result, expected result is an array with all values only over 30
-console.log("Result of the copy of the array, which only includes elements over 30 (Filter condition: x > 30)");
+console.log("Result of the copy of the num array, which only includes elements over 30 (Filter condition: x > 30)");
 console.dir(filteredArr);
+console.log("Result of the copy of the string array, which only includes elements over length of 6 (Filter condition: x > 6)");
+console.dir(filteredStrArr);
