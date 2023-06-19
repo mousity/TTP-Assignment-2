@@ -1,6 +1,5 @@
 /* grabKeys() will be a function that iterates through an object and returns all keys */
 
-
 // Beginning of function embedded into the prototype of object
 Object.prototype.grabKeys = function (obj){
     // variable declaration for iterator and array to return
@@ -22,5 +21,5 @@ let obj = {key: 'lock', pet: 'dog', color: 'blue'};
 let arr = Object.grabKeys(obj);
 
 // user output
-console.log("The following array element are all of our keys: ");
+console.log("The following array elements are all of our keys: ");
 console.dir(arr);
